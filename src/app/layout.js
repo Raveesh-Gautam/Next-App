@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+// Google fonts with CSS variables
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -20,9 +21,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        {children}
+        <header className="bg-gray-800 text-white p-4 text-center">
+          <h1 className="text-2xl font-bold">🌐 My Next.js Site</h1>
+          <nav className="mt-2 text-sm">[Navigation Placeholder]</nav>
+        </header>
+
+        <main className="flex-1 p-6">{children}</main>
+
+        <footer className="bg-gray-200 text-center p-4">
+          © 2025 My Next.js App — All Rights Reserved
+        </footer>
       </body>
     </html>
   );
