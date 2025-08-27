@@ -1,4 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -23,8 +25,11 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <header className="bg-gray-800 text-white p-4 text-center">
-          <h1 className="text-2xl font-bold">🌐 My Next.js Site</h1>
-          <nav className="mt-2 text-sm">[Navigation Placeholder]</nav>
+          <div className="flex justify-center items-center ">
+      <img src="/dinetimelogo.png" width={100} />
+          <span className="text-2xl font-bold"> {" "}My Next.js Site</span>
+          </div>
+          <nav className="mt-1 text-sm">Hey Join and Enjoy !</nav>
         </header>
 
         <main className="flex-1 p-6">{children}</main>

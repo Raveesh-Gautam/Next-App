@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-export const revalidate = 60; // ISR (refresh every 60s)
+export const revalidate = 600; // ISR (refresh every 60s)
 
 async function getProduct(id) {
   const res = await fetch(`https://dummyjson.com/products/${id}`, {
-    next: { revalidate: 60 },
+    next: { revalidate: 600 },
   });
 
   if (!res.ok) {
