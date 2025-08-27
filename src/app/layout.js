@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-// Google fonts with CSS variables
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -30,7 +29,7 @@ export default function RootLayout({ children }) {
 
         <main className="flex-1 p-6">{children}</main>
 
-        <footer className="bg-gray-200 text-center p-4">
+        <footer className="bg-gray-200 text-center text-black p-4">
           © 2025 My Next.js App — All Rights Reserved
         </footer>
       </body>
